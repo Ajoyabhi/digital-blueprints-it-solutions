@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Filter } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const CaseStudies = () => {
   const [selectedFilter, setSelectedFilter] = useState('All');
@@ -20,7 +21,8 @@ const CaseStudies = () => {
       tags: ['Cloud Migration', 'Healthcare', 'Compliance'],
       challenge: 'Legacy system causing delays in patient care',
       solution: 'AWS cloud migration with enhanced security',
-      results: 'Improved patient care efficiency and data security'
+      results: 'Improved patient care efficiency and data security',
+      slug: 'healthcare-cloud-migration'
     },
     {
       title: 'E-commerce AI Integration',
@@ -31,7 +33,8 @@ const CaseStudies = () => {
       tags: ['AI/ML', 'E-commerce', 'Automation'],
       challenge: 'Low conversion rates and high support costs',
       solution: 'AI recommendation engine and intelligent chatbot',
-      results: 'Significant revenue growth and cost reduction'
+      results: 'Significant revenue growth and cost reduction',
+      slug: 'ecommerce-ai-integration'
     },
     {
       title: 'Banking Security Overhaul',
@@ -42,7 +45,8 @@ const CaseStudies = () => {
       tags: ['Cybersecurity', 'Banking', 'Zero Trust'],
       challenge: 'Increasing cyber threats and regulatory compliance',
       solution: 'Zero-trust security architecture implementation',
-      results: 'Enhanced security posture and regulatory compliance'
+      results: 'Enhanced security posture and regulatory compliance',
+      slug: 'banking-security-overhaul'
     },
     {
       title: 'Manufacturing IoT Platform',
@@ -53,7 +57,8 @@ const CaseStudies = () => {
       tags: ['IoT', 'Manufacturing', 'Analytics'],
       challenge: 'Unexpected equipment failures causing costly downtime',
       solution: 'Predictive maintenance IoT platform',
-      results: 'Reduced downtime and increased productivity'
+      results: 'Reduced downtime and increased productivity',
+      slug: 'manufacturing-iot-platform'
     },
     {
       title: 'Education Platform Modernization',
@@ -64,7 +69,8 @@ const CaseStudies = () => {
       tags: ['Education', 'Web Development', 'Scalability'],
       challenge: 'Outdated system unable to handle growing user base',
       solution: 'Modern, scalable learning management platform',
-      results: 'Improved user experience and system reliability'
+      results: 'Improved user experience and system reliability',
+      slug: 'education-platform-modernization'
     },
     {
       title: 'Fintech API Development',
@@ -75,7 +81,8 @@ const CaseStudies = () => {
       tags: ['API Development', 'Fintech', 'Security'],
       challenge: 'Need for secure, scalable payment infrastructure',
       solution: 'Microservices-based payment API with advanced security',
-      results: 'Reliable payment processing enabling business growth'
+      results: 'Reliable payment processing enabling business growth',
+      slug: 'fintech-api-development'
     }
   ];
 
@@ -176,7 +183,7 @@ const CaseStudies = () => {
                     </div>
                   </div>
                   
-                  <div className="space-y-3 text-sm">
+                  <div className="space-y-3 text-sm mb-6">
                     <div>
                       <span className="font-semibold text-gray-800">Challenge: </span>
                       <span className="text-gray-600">{study.challenge}</span>
@@ -191,10 +198,12 @@ const CaseStudies = () => {
                     </div>
                   </div>
                   
-                  <Button className="w-full mt-6 group-hover:bg-navy-900 transition-colors">
-                    Read Full Story
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
+                  <Link to={`/case-studies/${study.slug}`}>
+                    <Button className="w-full group-hover:bg-navy-900 transition-colors">
+                      Read Full Story
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}

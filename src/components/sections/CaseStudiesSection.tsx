@@ -13,21 +13,24 @@ const CaseStudiesSection = () => {
       industry: 'Healthcare',
       description: 'Migrated legacy systems to cloud, improving patient data access by 60%',
       image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&q=80&w=400&h=250',
-      metrics: '60% faster access'
+      metrics: '60% faster access',
+      slug: 'healthcare-cloud-migration'
     },
     {
       title: 'E-commerce AI Integration',
       industry: 'E-commerce',
       description: 'Implemented AI-powered recommendation engine, boosting sales by 35%',
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=400&h=250',
-      metrics: '35% sales increase'
+      metrics: '35% sales increase',
+      slug: 'ecommerce-ai-integration'
     },
     {
       title: 'Banking Security Overhaul',
       industry: 'Financial',
       description: 'Enhanced cybersecurity infrastructure, preventing 99.9% of threats',
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=400&h=250',
-      metrics: '99.9% threat prevention'
+      metrics: '99.9% threat prevention',
+      slug: 'banking-security-overhaul'
     }
   ];
 
@@ -63,7 +66,7 @@ const CaseStudiesSection = () => {
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-navy-900 mb-3">{study.title}</h3>
                 <p className="text-gray-600 leading-relaxed mb-4">{study.description}</p>
-                <Link to="/case-studies" className="inline-flex items-center text-electric-600 font-medium hover:text-electric-700 transition-colors">
+                <Link to={`/case-studies/${study.slug}`} className="inline-flex items-center text-electric-600 font-medium hover:text-electric-700 transition-colors">
                   Read Full Story
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
