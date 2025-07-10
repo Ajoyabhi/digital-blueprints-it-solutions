@@ -18,31 +18,36 @@ const ServicesOverview = () => {
       icon: Cloud,
       title: 'Cloud Solutions',
       description: 'Scalable cloud infrastructure and migration services for modern businesses.',
-      color: 'text-electric-500'
+      color: 'text-electric-500',
+      link: '/services/cloud-solutions'
     },
     {
       icon: ShieldCheck,
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your digital assets.',
-      color: 'text-neon-500'
+      color: 'text-neon-500',
+      link: '/services/cybersecurity'
     },
     {
       icon: Code,
       title: 'AI/ML Services',
       description: 'Intelligent automation and machine learning solutions.',
-      color: 'text-navy-500'
+      color: 'text-navy-500',
+      link: '/services/ai-ml-services'
     },
     {
       icon: Users,
       title: 'Software Development',
       description: 'Custom software and applications tailored to your needs.',
-      color: 'text-electric-600'
+      color: 'text-electric-600',
+      link: '/services/software-development'
     },
     {
       icon: Clock,
       title: 'IT Infrastructure',
       description: '24/7 managed services and infrastructure optimization.',
-      color: 'text-neon-600'
+      color: 'text-neon-600',
+      link: '/services/it-infrastructure'
     }
   ];
 
@@ -68,7 +73,7 @@ const ServicesOverview = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-navy-900 mb-4">{service.title}</h3>
                 <p className="text-gray-600 leading-relaxed mb-6">{service.description}</p>
-                <Link to="/services" className="inline-flex items-center text-electric-600 font-medium hover:text-electric-700 transition-colors">
+                <Link to={service.link} className="inline-flex items-center text-electric-600 font-medium hover:text-electric-700 transition-colors">
                   Learn More
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>

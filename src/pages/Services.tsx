@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -27,7 +26,8 @@ const Services = () => {
       description: 'Complete cloud transformation services including migration, optimization, and management across AWS, Azure, and Google Cloud platforms.',
       features: ['Cloud Migration', 'Infrastructure as Code', 'Cost Optimization', 'Multi-cloud Strategy'],
       color: 'from-electric-500 to-electric-600',
-      badge: 'Infrastructure'
+      badge: 'Infrastructure',
+      link: '/services/cloud-solutions'
     },
     {
       icon: ShieldCheck,
@@ -35,7 +35,8 @@ const Services = () => {
       description: 'Comprehensive security solutions to protect your digital assets from evolving threats with advanced monitoring and response.',
       features: ['Threat Detection', 'Security Audits', 'Compliance Management', 'Incident Response'],
       color: 'from-red-500 to-red-600',
-      badge: 'Security'
+      badge: 'Security',
+      link: '/services/cybersecurity'
     },
     {
       icon: Code,
@@ -43,7 +44,8 @@ const Services = () => {
       description: 'Intelligent automation and machine learning solutions that transform data into actionable insights and automated processes.',
       features: ['Predictive Analytics', 'Process Automation', 'Natural Language Processing', 'Computer Vision'],
       color: 'from-purple-500 to-purple-600',
-      badge: 'Innovation'
+      badge: 'Innovation',
+      link: '/services/ai-ml-services'
     },
     {
       icon: Users,
@@ -51,7 +53,8 @@ const Services = () => {
       description: 'Custom software applications and platforms built with modern technologies to meet your specific business requirements.',
       features: ['Web Applications', 'Mobile Apps', 'API Development', 'Legacy Modernization'],
       color: 'from-neon-500 to-neon-600',
-      badge: 'Development'
+      badge: 'Development',
+      link: '/services/software-development'
     },
     {
       icon: Server,
@@ -59,7 +62,8 @@ const Services = () => {
       description: 'Complete infrastructure management and optimization with 24/7 monitoring, maintenance, and support services.',
       features: ['24/7 Monitoring', 'Network Management', 'Backup & Recovery', 'Performance Optimization'],
       color: 'from-blue-500 to-blue-600',
-      badge: 'Management'
+      badge: 'Management',
+      link: '/services/it-infrastructure'
     },
     {
       icon: Database,
@@ -67,7 +71,8 @@ const Services = () => {
       description: 'Transform your raw data into valuable business insights with advanced analytics and visualization solutions.',
       features: ['Data Warehousing', 'Business Intelligence', 'Real-time Analytics', 'Data Visualization'],
       color: 'from-orange-500 to-orange-600',
-      badge: 'Analytics'
+      badge: 'Analytics',
+      link: '/services'
     }
   ];
 
@@ -139,10 +144,12 @@ const Services = () => {
                     ))}
                   </div>
                   
-                  <Button className="w-full group-hover:bg-navy-900 transition-colors">
-                    Learn More
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
+                  <Link to={service.link}>
+                    <Button className="w-full group-hover:bg-navy-900 transition-colors">
+                      Learn More
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
@@ -166,7 +173,23 @@ const Services = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {additionalServices.map((service, index) => (
+            {[
+              {
+                icon: Globe,
+                title: 'Digital Transformation',
+                description: 'End-to-end digital transformation consulting and implementation.'
+              },
+              {
+                icon: Zap,
+                title: 'Performance Optimization',
+                description: 'Optimize your systems for maximum efficiency and speed.'
+              },
+              {
+                icon: Settings,
+                title: 'IT Consulting',
+                description: 'Strategic technology consulting and architecture design.'
+              }
+            ].map((service, index) => (
               <div 
                 key={service.title} 
                 className="text-center group animate-fade-in" 
