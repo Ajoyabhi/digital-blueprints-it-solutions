@@ -2,7 +2,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { Menu, X, Code } from 'lucide-react';
+import { Menu, X, Code, ChevronDown } from 'lucide-react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import ConsultationDialog from '@/components/dialogs/ConsultationDialog';
 
 const Header = () => {
@@ -21,13 +27,21 @@ const Header = () => {
 
   const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'About Us', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];
 
+  const services = [
+    { name: 'Cloud Solutions', href: '/services/cloud-solutions' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity' },
+    { name: 'AI/ML Services', href: '/services/ai-ml-services' },
+    { name: 'Software Development', href: '/services/software-development' },
+    { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
+  ];
+
   const isActive = (path: string) => location.pathname === path;
+  const isServicesActive = () => location.pathname.startsWith('/services');
 
   return (
     <>
@@ -75,6 +89,51 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
+              
+              {/* Services Dropdown */}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button
+                    className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 hover:text-electric-500 flex items-center gap-1 ${
+                      isServicesActive()
+                        ? isScrolled 
+                          ? 'text-electric-600' 
+                          : 'text-electric-400'
+                        : isScrolled 
+                          ? 'text-navy-700 hover:text-electric-600' 
+                          : 'text-gray-200 hover:text-white'
+                    } after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-electric-500 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left ${
+                      isServicesActive() ? 'after:scale-x-100' : ''
+                    }`}
+                  >
+                    Services
+                    <ChevronDown className="w-4 h-4" />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent 
+                  align="start" 
+                  className="w-56 bg-white border border-gray-200 shadow-lg"
+                >
+                  <DropdownMenuItem asChild>
+                    <Link 
+                      to="/services" 
+                      className="w-full px-3 py-2 text-sm font-medium text-navy-700 hover:text-electric-600 hover:bg-gray-50 cursor-pointer"
+                    >
+                      All Services
+                    </Link>
+                  </DropdownMenuItem>
+                  {services.map((service) => (
+                    <DropdownMenuItem key={service.name} asChild>
+                      <Link 
+                        to={service.href}
+                        className="w-full px-3 py-2 text-sm text-navy-700 hover:text-electric-600 hover:bg-gray-50 cursor-pointer"
+                      >
+                        {service.name}
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
 
             {/* CTA Button */}
@@ -122,6 +181,31 @@ const Header = () => {
                     {item.name}
                   </Link>
                 ))}
+                
+                {/* Mobile Services Section */}
+                <div className="pt-2">
+                  <div className="px-3 py-2 text-base font-medium text-navy-900 border-b border-gray-200">
+                    Services
+                  </div>
+                  <Link
+                    to="/services"
+                    className="block px-6 py-2 text-sm text-navy-700 hover:text-electric-600 hover:bg-gray-50"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    All Services
+                  </Link>
+                  {services.map((service) => (
+                    <Link
+                      key={service.name}
+                      to={service.href}
+                      className="block px-6 py-2 text-sm text-navy-700 hover:text-electric-600 hover:bg-gray-50"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+                
                 <div className="pt-2">
                   <Button 
                     className="w-full bg-navy-900 hover:bg-navy-800 text-white"
