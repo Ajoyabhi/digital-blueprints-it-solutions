@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'wouter';
-import AnnouncementBar from './AnnouncementBar';
 import Header from './Header';
 import Footer from './Footer';
 import PageLoader from './PageLoader';
@@ -38,10 +37,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="min-h-screen flex flex-col">
       {isLoading && <PageLoader />}
-      <AnnouncementBar />
-      <div className="pt-2">
-        <Header />
-      </div>
+      <Header />
       <main 
         className={`flex-1 transition-opacity duration-300 ${
           isTransitioning ? 'opacity-0' : 'opacity-100'
