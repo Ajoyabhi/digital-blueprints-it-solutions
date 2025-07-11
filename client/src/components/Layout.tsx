@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'wouter';
 import Header from './Header';
 import Footer from './Footer';
 import PageLoader from './PageLoader';
@@ -12,7 +12,7 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const location = useLocation();
+  const [location] = useLocation();
 
   useEffect(() => {
     setIsLoading(true);
@@ -31,7 +31,7 @@ const Layout = ({ children }: LayoutProps) => {
       clearTimeout(loadingTimer);
       clearTimeout(transitionTimer);
     };
-  }, [location.pathname]);
+  }, [location]);
 
   return (
     <div className="min-h-screen flex flex-col">

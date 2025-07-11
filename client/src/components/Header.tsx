@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'wouter';
 import { Button } from "@/components/ui/button";
 import { Menu, X, Code, ChevronDown } from 'lucide-react';
 import {
@@ -15,7 +15,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const location = useLocation();
+  const [location] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,8 +40,8 @@ const Header = () => {
     { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
   ];
 
-  const isActive = (path: string) => location.pathname === path;
-  const isServicesActive = () => location.pathname.startsWith('/services');
+  const isActive = (path: string) => location === path;
+  const isServicesActive = () => location.startsWith('/services');
 
   return (
     <>

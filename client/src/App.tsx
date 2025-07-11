@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Router, Route, Switch } from "wouter";
 import Layout from "./components/Layout";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
@@ -19,34 +19,46 @@ import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      queryFn: async ({ queryKey }) => {
+        const [url] = queryKey;
+        const res = await fetch(url as string);
+        if (!res.ok) {
+          throw new Error(`Failed to fetch ${url}: ${res.status}`);
+        }
+        return res.json();
+      },
+    },
+  },
+});
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <Router>
         <Layout>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/services/cloud-solutions" element={<CloudSolutions />} />
-            <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-            <Route path="/services/ai-ml-services" element={<AiMlServices />} />
-            <Route path="/services/software-development" element={<SoftwareDevelopment />} />
-            <Route path="/services/it-infrastructure" element={<ItInfrastructure />} />
-            <Route path="/case-studies" element={<CaseStudies />} />
-            <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/terms" element={<Terms />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <Switch>
+            <Route path="/" component={Index} />
+            <Route path="/services" component={Services} />
+            <Route path="/services/cloud-solutions" component={CloudSolutions} />
+            <Route path="/services/cybersecurity" component={Cybersecurity} />
+            <Route path="/services/ai-ml-services" component={AiMlServices} />
+            <Route path="/services/software-development" component={SoftwareDevelopment} />
+            <Route path="/services/it-infrastructure" component={ItInfrastructure} />
+            <Route path="/case-studies" component={CaseStudies} />
+            <Route path="/case-studies/:slug" component={CaseStudyDetail} />
+            <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/privacy" component={Privacy} />
+            <Route path="/terms" component={Terms} />
+            <Route component={NotFound} />
+          </Switch>
         </Layout>
-      </BrowserRouter>
+      </Router>
     </TooltipProvider>
   </QueryClientProvider>
 );
