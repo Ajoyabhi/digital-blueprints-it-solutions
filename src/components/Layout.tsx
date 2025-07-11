@@ -21,15 +21,15 @@ const Layout = ({ children }: LayoutProps) => {
     // Simulate realistic loading time with smooth transition
     const loadingTimer = setTimeout(() => {
       setIsLoading(false);
-    }, 800); // Slightly longer for better UX
+    }, 800);
 
-    // const transitionTimer = setTimeout(() => {
-    //   setIsTransitioning(false);
-    // }, 1000);
+    const transitionTimer = setTimeout(() => {
+      setIsTransitioning(false);
+    }, 1000);
 
     return () => {
       clearTimeout(loadingTimer);
-      // clearTimeout(transitionTimer);
+      clearTimeout(transitionTimer);
     };
   }, [location.pathname]);
 
