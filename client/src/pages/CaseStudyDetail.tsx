@@ -82,6 +82,78 @@ const CaseStudyDetail = () => {
         author: "Jennifer Walsh",
         position: "Chief Security Officer"
       }
+    },
+    'manufacturing-iot-platform': {
+      title: 'Manufacturing IoT Platform',
+      industry: 'Manufacturing',
+      client: 'Industrial Manufacturing Corp',
+      duration: '5 months',
+      teamSize: '7 specialists',
+      description: 'Comprehensive IoT-enabled monitoring system implementation for production lines with predictive maintenance capabilities.',
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800&h=400',
+      challenge: 'The manufacturing facility experienced frequent unexpected equipment failures causing significant production downtime and revenue losses. Manual monitoring was inefficient, and maintenance was purely reactive, leading to costly emergency repairs and extended outages.',
+      solution: 'We deployed a comprehensive IoT monitoring platform with predictive analytics:\n\n• IoT sensors for real-time equipment monitoring\n• Machine learning algorithms for predictive maintenance\n• Automated alert systems for proactive interventions\n• Centralized dashboard for operations management\n• Integration with existing manufacturing systems',
+      results: 'The IoT platform transformation delivered substantial operational improvements:\n\n• 40% reduction in equipment downtime\n• 25% increase in overall equipment effectiveness\n• 30% decrease in maintenance costs\n• Real-time visibility into production metrics\n• Improved worker safety through predictive alerts',
+      metrics: [
+        { label: 'Downtime Reduction', value: '40%', icon: TrendingUp },
+        { label: 'Efficiency Gain', value: '25%', icon: Target },
+        { label: 'Cost Savings', value: '30%', icon: CheckCircle },
+        { label: 'Implementation', value: '5 months', icon: Calendar }
+      ],
+      technologies: ['IoT Sensors', 'Python', 'Machine Learning', 'React Dashboard', 'PostgreSQL'],
+      testimonial: {
+        quote: "The IoT platform has revolutionized our operations. We can now predict and prevent failures before they impact production.",
+        author: "Robert Johnson",
+        position: "Operations Director"
+      }
+    },
+    'education-platform-modernization': {
+      title: 'Education Platform Modernization',
+      industry: 'Education',
+      client: 'State University System',
+      duration: '7 months',
+      teamSize: '12 specialists',
+      description: 'Complete modernization of learning management system to support massive scale with enhanced performance and accessibility.',
+      image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800&h=400',
+      challenge: 'The university\'s legacy learning management system could not handle the growing student population of 50,000+ users. The system experienced frequent crashes, slow loading times, and poor mobile compatibility, significantly impacting the learning experience.',
+      solution: 'We built a modern, scalable learning management platform:\n\n• Cloud-native architecture for unlimited scalability\n• Mobile-first responsive design\n• Advanced caching and performance optimization\n• Accessibility compliance (WCAG 2.1)\n• Integration with existing university systems',
+      results: 'The platform modernization achieved exceptional performance improvements:\n\n• 70% faster page loading times\n• 50,000+ concurrent users supported\n• 99.5% system uptime achieved\n• Mobile-optimized experience\n• Full accessibility compliance',
+      metrics: [
+        { label: 'Loading Speed', value: '70% faster', icon: TrendingUp },
+        { label: 'User Capacity', value: '50K+', icon: Target },
+        { label: 'System Uptime', value: '99.5%', icon: CheckCircle },
+        { label: 'Project Duration', value: '7 months', icon: Calendar }
+      ],
+      technologies: ['React', 'Node.js', 'PostgreSQL', 'AWS', 'Redis'],
+      testimonial: {
+        quote: "The new platform has transformed our online education capabilities. Students and faculty love the improved performance and usability.",
+        author: "Dr. Patricia Williams",
+        position: "Dean of Digital Learning"
+      }
+    },
+    'fintech-api-development': {
+      title: 'Fintech API Development',
+      industry: 'Financial',
+      client: 'NextGen Payments',
+      duration: '6 months',
+      teamSize: '9 specialists',
+      description: 'Secure, scalable payment processing API development for fintech startup handling millions of transactions with enterprise-grade reliability.',
+      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&q=80&w=800&h=400',
+      challenge: 'The fintech startup needed a robust payment processing infrastructure to handle rapid growth and millions of transactions. They required PCI compliance, real-time processing, and seamless integration capabilities while maintaining the highest security standards.',
+      solution: 'We developed a comprehensive microservices-based payment API platform:\n\n• Microservices architecture for scalability\n• Advanced security with end-to-end encryption\n• Real-time transaction processing\n• PCI DSS compliance implementation\n• Comprehensive API documentation and SDKs\n• Multi-currency and multi-payment method support',
+      results: 'The payment API platform delivered exceptional business outcomes:\n\n• 99.99% system uptime achieved\n• Millions of transactions processed daily\n• Sub-second transaction processing times\n• Full PCI DSS compliance\n• 40% reduction in transaction costs\n• Seamless third-party integrations',
+      metrics: [
+        { label: 'System Uptime', value: '99.99%', icon: CheckCircle },
+        { label: 'Daily Transactions', value: 'Millions', icon: TrendingUp },
+        { label: 'Processing Time', value: '<1 second', icon: Target },
+        { label: 'Development Time', value: '6 months', icon: Calendar }
+      ],
+      technologies: ['Node.js', 'PostgreSQL', 'Redis', 'Docker', 'AWS', 'Stripe API'],
+      testimonial: {
+        quote: "The payment API has been the foundation of our success. It handles our massive transaction volume flawlessly with perfect reliability.",
+        author: "David Kim",
+        position: "CTO & Co-founder"
+      }
     }
   };
 
