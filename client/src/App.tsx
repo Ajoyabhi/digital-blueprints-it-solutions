@@ -27,6 +27,12 @@ import DigitalWallet from "./pages/fintech/DigitalWallet";
 import TradingPlatform from "./pages/fintech/TradingPlatform";
 import LendingPlatform from "./pages/fintech/LendingPlatform";
 import InsuranceTech from "./pages/fintech/InsuranceTech";
+import DomesticMoneyTransfer from "./pages/fintech/DomesticMoneyTransfer";
+import UtilityPayments from "./pages/fintech/UtilityPayments";
+import BBPSIntegration from "./pages/fintech/BBPSIntegration";
+import MobileRecharge from "./pages/fintech/MobileRecharge";
+import AEPSIntegration from "./pages/fintech/AEPSIntegration";
+import WhiteLabel from "./pages/fintech/WhiteLabel";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -73,6 +79,12 @@ const App = () => (
             <Route path="/fintech/trading-platform" component={TradingPlatform} />
             <Route path="/fintech/lending-platform" component={LendingPlatform} />
             <Route path="/fintech/insurance-tech" component={InsuranceTech} />
+            <Route path="/fintech/dmt" component={DomesticMoneyTransfer} />
+            <Route path="/fintech/utility-payments" component={UtilityPayments} />
+            <Route path="/fintech/bbps" component={BBPSIntegration} />
+            <Route path="/fintech/recharge" component={MobileRecharge} />
+            <Route path="/fintech/aeps" component={AEPSIntegration} />
+            <Route path="/fintech/white-label" component={WhiteLabel} />
             <Route component={NotFound} />
           </Switch>
         </Layout>
