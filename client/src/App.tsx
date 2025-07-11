@@ -15,6 +15,7 @@ import CaseStudies from "./pages/CaseStudies";
 import CaseStudyDetail from "./pages/CaseStudyDetail";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Pricing from "./pages/Pricing";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
@@ -53,6 +54,7 @@ const App = () => (
             <Route path="/case-studies/:slug" component={CaseStudyDetail} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
+            <Route path="/pricing" component={Pricing} />
             <Route path="/privacy" component={Privacy} />
             <Route path="/terms" component={Terms} />
             <Route component={NotFound} />

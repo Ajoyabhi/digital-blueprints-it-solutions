@@ -1,9 +1,11 @@
 
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'wouter';
+import AnnouncementBar from './AnnouncementBar';
 import Header from './Header';
 import Footer from './Footer';
 import PageLoader from './PageLoader';
+import Chatbot from './Chatbot';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -36,6 +38,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="min-h-screen flex flex-col">
       {isLoading && <PageLoader />}
+      <AnnouncementBar />
       <Header />
       <main 
         className={`flex-1 transition-opacity duration-300 ${
@@ -45,6 +48,7 @@ const Layout = ({ children }: LayoutProps) => {
         {children}
       </main>
       <Footer />
+      <Chatbot />
     </div>
   );
 };
