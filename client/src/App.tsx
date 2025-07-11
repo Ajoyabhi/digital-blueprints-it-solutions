@@ -19,6 +19,14 @@ import Pricing from "./pages/Pricing";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
+import PaymentGateway from "./pages/fintech/PaymentGateway";
+import PayoutGateway from "./pages/fintech/PayoutGateway";
+import BusinessSoftware from "./pages/fintech/BusinessSoftware";
+import CurrencyExchange from "./pages/fintech/CurrencyExchange";
+import DigitalWallet from "./pages/fintech/DigitalWallet";
+import TradingPlatform from "./pages/fintech/TradingPlatform";
+import LendingPlatform from "./pages/fintech/LendingPlatform";
+import InsuranceTech from "./pages/fintech/InsuranceTech";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -57,6 +65,14 @@ const App = () => (
             <Route path="/pricing" component={Pricing} />
             <Route path="/privacy" component={Privacy} />
             <Route path="/terms" component={Terms} />
+            <Route path="/fintech/payment-gateway" component={PaymentGateway} />
+            <Route path="/fintech/payout-gateway" component={PayoutGateway} />
+            <Route path="/fintech/business-software" component={BusinessSoftware} />
+            <Route path="/fintech/currency-exchange" component={CurrencyExchange} />
+            <Route path="/fintech/digital-wallet" component={DigitalWallet} />
+            <Route path="/fintech/trading-platform" component={TradingPlatform} />
+            <Route path="/fintech/lending-platform" component={LendingPlatform} />
+            <Route path="/fintech/insurance-tech" component={InsuranceTech} />
             <Route component={NotFound} />
           </Switch>
         </Layout>

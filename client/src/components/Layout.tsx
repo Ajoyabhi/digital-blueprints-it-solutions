@@ -39,7 +39,9 @@ const Layout = ({ children }: LayoutProps) => {
     <div className="min-h-screen flex flex-col">
       {isLoading && <PageLoader />}
       <AnnouncementBar />
-      <Header />
+      <div className="pt-2">
+        <Header />
+      </div>
       <main 
         className={`flex-1 transition-opacity duration-300 ${
           isTransitioning ? 'opacity-0' : 'opacity-100'
