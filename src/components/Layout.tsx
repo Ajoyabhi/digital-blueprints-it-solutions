@@ -11,24 +11,37 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   const [isLoading, setIsLoading] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     setIsLoading(true);
+    setIsTransitioning(true);
     
-    // Simulate loading time and smooth transition
-    const timer = setTimeout(() => {
+    // Simulate realistic loading time with smooth transition
+    const loadingTimer = setTimeout(() => {
       setIsLoading(false);
-    }, 300);
+    }, 800); // Slightly longer for better UX
 
-    return () => clearTimeout(timer);
+    const transitionTimer = setTimeout(() => {
+      setIsTransitioning(false);
+    }, 1000);
+
+    return () => {
+      clearTimeout(loadingTimer);
+      clearTimeout(transitionTimer);
+    };
   }, [location.pathname]);
 
   return (
     <div className="min-h-screen flex flex-col">
       {isLoading && <PageLoader />}
       <Header />
-      <main className="flex-1">
+      <main 
+        className={`flex-1 transition-opacity duration-300 ${
+          isTransitioning ? 'opacity-0' : 'opacity-100'
+        }`}
+      >
         {children}
       </main>
       <Footer />
