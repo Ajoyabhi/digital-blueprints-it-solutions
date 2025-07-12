@@ -72,7 +72,7 @@ const Services = () => {
       features: ['Data Warehousing', 'Business Intelligence', 'Real-time Analytics', 'Data Visualization'],
       color: 'from-orange-500 to-orange-600',
       badge: 'Analytics',
-      link: '/services'
+      link: '/services/data-analytics'
     }
   ];
 

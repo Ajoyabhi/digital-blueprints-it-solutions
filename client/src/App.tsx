@@ -11,6 +11,7 @@ import Cybersecurity from "./pages/services/Cybersecurity";
 import AiMlServices from "./pages/services/AiMlServices";
 import SoftwareDevelopment from "./pages/services/SoftwareDevelopment";
 import ItInfrastructure from "./pages/services/ItInfrastructure";
+import DataAnalytics from "./pages/services/DataAnalytics";
 import CaseStudies from "./pages/CaseStudies";
 import CaseStudyDetail from "./pages/CaseStudyDetail";
 import About from "./pages/About";
@@ -64,6 +65,7 @@ const App = () => (
             <Route path="/services/ai-ml-services" component={AiMlServices} />
             <Route path="/services/software-development" component={SoftwareDevelopment} />
             <Route path="/services/it-infrastructure" component={ItInfrastructure} />
+            <Route path="/services/data-analytics" component={DataAnalytics} />
             <Route path="/case-studies" component={CaseStudies} />
             <Route path="/case-studies/:slug" component={CaseStudyDetail} />
             <Route path="/about" component={About} />
