@@ -20,14 +20,9 @@ import {
   Receipt,
   Users,
   Globe,
+  BarChart3,
 } from "lucide-react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-  DropdownMenuSeparator,
-} from "@/components/ui/dropdown-menu";
+
 import ConsultationDialog from "@/components/dialogs/ConsultationDialog";
 
 const Header = () => {
@@ -65,6 +60,11 @@ const Header = () => {
       name: "IT Infrastructure",
       href: "/services/it-infrastructure",
       icon: Settings,
+    },
+    {
+      name: "Data Analytics",
+      href: "/services/data-analytics",
+      icon: BarChart3,
     },
   ];
 
@@ -159,30 +159,25 @@ const Header = () => {
               ))}
 
               {/* Services Dropdown */}
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <button
-                    className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 hover:text-electric-500 flex items-center gap-1 ${
-                      isServicesActive()
-                        ? isScrolled
-                          ? "text-electric-600"
-                          : "text-electric-400"
-                        : isScrolled
-                          ? "text-navy-700 hover:text-electric-600"
-                          : "text-gray-200 hover:text-white"
-                    } after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-electric-500 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left ${
-                      isServicesActive() ? "after:scale-x-100" : ""
-                    }`}
-                  >
-                    Services
-                    <ChevronDown className="w-4 h-4" />
-                  </button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent
-                  align="start"
-                  className="w-64 bg-white border border-gray-200 shadow-lg"
+              <div className="relative group">
+                <button
+                  className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 hover:text-electric-500 flex items-center gap-1 ${
+                    isServicesActive()
+                      ? isScrolled
+                        ? "text-electric-600"
+                        : "text-electric-400"
+                      : isScrolled
+                        ? "text-navy-700 hover:text-electric-600"
+                        : "text-gray-200 hover:text-white"
+                  } after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-electric-500 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left ${
+                    isServicesActive() ? "after:scale-x-100" : ""
+                  }`}
                 >
-                  <DropdownMenuItem asChild>
+                  Services
+                  <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+                </button>
+                <div className="absolute top-full left-0 mt-1 w-64 bg-white border border-gray-200 shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="py-2">
                     <Link
                       to="/services"
                       className="w-full px-3 py-2 text-sm font-medium text-navy-700 hover:text-electric-600 hover:bg-gray-50 cursor-pointer flex items-center gap-2"
@@ -190,68 +185,63 @@ const Header = () => {
                       <Globe className="w-4 h-4" />
                       All Services
                     </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuSeparator />
-                  {services.map((service) => {
-                    const Icon = service.icon;
-                    return (
-                      <DropdownMenuItem key={service.name} asChild>
+                    <div className="border-t border-gray-100 my-1"></div>
+                    {services.map((service) => {
+                      const Icon = service.icon;
+                      return (
                         <Link
+                          key={service.name}
                           to={service.href}
                           className="w-full px-3 py-2 text-sm text-gray-700 hover:text-electric-600 hover:bg-gray-50 cursor-pointer flex items-center gap-2"
                         >
                           <Icon className="w-4 h-4" />
                           {service.name}
                         </Link>
-                      </DropdownMenuItem>
-                    );
-                  })}
-                </DropdownMenuContent>
-              </DropdownMenu>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
 
               {/* Fintech Services Dropdown */}
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <button
-                    className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 hover:text-electric-500 flex items-center gap-1 ${
-                      isFintechActive()
-                        ? isScrolled
-                          ? "text-electric-600"
-                          : "text-electric-400"
-                        : isScrolled
-                          ? "text-navy-700 hover:text-electric-600"
-                          : "text-gray-200 hover:text-white"
-                    } after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-electric-500 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left ${
-                      isFintechActive() ? "after:scale-x-100" : ""
-                    }`}
-                  >
-                    Fintech Solutions
-                    <ChevronDown className="w-4 h-4" />
-                  </button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent
-                  align="start"
-                  className="w-72 bg-white border border-gray-200 shadow-lg"
+              <div className="relative group">
+                <button
+                  className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 hover:text-electric-500 flex items-center gap-1 ${
+                    isFintechActive()
+                      ? isScrolled
+                        ? "text-electric-600"
+                        : "text-electric-400"
+                      : isScrolled
+                        ? "text-navy-700 hover:text-electric-600"
+                        : "text-gray-200 hover:text-white"
+                  } after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-electric-500 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left ${
+                    isFintechActive() ? "after:scale-x-100" : ""
+                  }`}
                 >
-                  <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">
-                    Payment & Financial APIs
-                  </div>
-                  {fintechServices.map((service) => {
-                    const Icon = service.icon;
-                    return (
-                      <DropdownMenuItem key={service.name} asChild>
+                  Fintech Solutions
+                  <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+                </button>
+                <div className="absolute top-full left-0 mt-1 w-72 bg-white border border-gray-200 shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="py-2">
+                    <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">
+                      Payment & Financial APIs
+                    </div>
+                    {fintechServices.map((service) => {
+                      const Icon = service.icon;
+                      return (
                         <Link
+                          key={service.name}
                           to={service.href}
                           className="w-full px-3 py-2 text-sm text-gray-700 hover:text-electric-600 hover:bg-gray-50 cursor-pointer flex items-center gap-2"
                         >
                           <Icon className="w-4 h-4" />
                           {service.name}
                         </Link>
-                      </DropdownMenuItem>
-                    );
-                  })}
-                </DropdownMenuContent>
-              </DropdownMenu>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Mobile menu button */}
