@@ -16,7 +16,7 @@ const Chatbot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: "Hello! I'm here to help you. For detailed assistance, please contact us at hello@techflow.com or call us at +1 (555) 123-4567.",
+      text: "Hello! I'm here to help you. For detailed assistance, please contact us at hello@payzutech.com or call us at +1 (555) 123-4567.",
       sender: 'bot',
       timestamp: new Date()
     }
@@ -35,7 +35,7 @@ const Chatbot = () => {
 
     const botResponse: Message = {
       id: (Date.now() + 1).toString(),
-      text: "Thank you for reaching out! For detailed assistance, please contact us at hello@techflow.com or call us at +1 (555) 123-4567.",
+      text: "Thank you for reaching out! For detailed assistance, please contact us at hello@payzutech.com or call us at +1 (555) 123-4567.",
       sender: 'bot',
       timestamp: new Date()
     };
@@ -71,7 +71,7 @@ const Chatbot = () => {
             <CardHeader className="bg-electric-500 text-white rounded-t-lg">
               <CardTitle className="flex items-center gap-2 text-lg">
                 <Bot className="w-5 h-5" />
-                TechFlow Assistant
+                PayzuTech Assistant
               </CardTitle>
             </CardHeader>
             <CardContent className="p-0">

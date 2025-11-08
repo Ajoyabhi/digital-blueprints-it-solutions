@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <Code className="w-8 h-8 text-electric-400" />
-              <span className="text-xl font-bold">TechFlow</span>
+              <span className="text-xl font-bold">PayzuTech</span>
             </div>
             <p className="text-gray-300 leading-relaxed">
               Empowering businesses with future-ready IT solutions. We transform
@@ -77,7 +77,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-electric-400" />
-                <span className="text-gray-300">hello@techflow.com</span>
+                <span className="text-gray-300">hello@payzutech.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-electric-400" />
@@ -93,7 +93,7 @@ const Footer = () => {
 
         <div className="border-t border-navy-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © 2024 TechFlow Solutions. All rights reserved.
+            © 2024 PayzuTech. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link

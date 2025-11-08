@@ -9,7 +9,7 @@ const TestimonialsSection = () => {
     {
       name: 'Sarah Johnson',
       role: 'CTO, InnovateCorp',
-      content: 'TechFlow transformed our entire IT infrastructure. The cloud migration was seamless and our productivity increased by 40%.',
+      content: 'PayzuTech transformed our entire IT infrastructure. The cloud migration was seamless and our productivity increased by 40%.',
       rating: 5
     },
     {
@@ -21,7 +21,7 @@ const TestimonialsSection = () => {
     {
       name: 'Emily Rodriguez',
       role: 'Director of Operations, SecureFinance',
-      content: 'The cybersecurity solutions provided by TechFlow gave us complete confidence in our digital security posture.',
+      content: 'The cybersecurity solutions provided by PayzuTech gave us complete confidence in our digital security posture.',
       rating: 5
     }
   ];
@@ -35,7 +35,7 @@ const TestimonialsSection = () => {
             What Our Clients Say
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what industry leaders say about partnering with TechFlow.
+            Don't just take our word for it. Here's what industry leaders say about partnering with PayzuTech.
           </p>
         </div>
 

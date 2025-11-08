@@ -1,4 +1,4 @@
-# TechFlow Solutions - IT Services Platform
+# PayzuTech - IT Services Platform
 
 A modern, full-stack web application for an IT services company that provides comprehensive cloud solutions, cybersecurity services, AI/ML implementation, software development, and IT infrastructure management. The platform showcases services, case studies, and client testimonials while providing consultation booking capabilities.
 
@@ -43,8 +43,8 @@ Before you begin, ensure you have the following installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/techflow-solutions.git
-cd techflow-solutions
+git clone https://github.com/yourusername/payzutech.git
+cd payzutech
 ```
 
 ### 2. Install Dependencies
@@ -59,7 +59,7 @@ Create a `.env` file in the root directory and add the following variables:
 
 ```env
 # Database Configuration
-DATABASE_URL="postgresql://username:password@localhost:5432/techflow_db"
+DATABASE_URL="postgresql://username:password@localhost:5432/payzutech_db"
 
 # Session Configuration
 SESSION_SECRET="your-super-secret-session-key-here"
@@ -79,7 +79,7 @@ NODE_ENV="development"
 1. Install PostgreSQL on your system
 2. Create a new database:
    ```sql
-   CREATE DATABASE techflow_db;
+   CREATE DATABASE payzutech_db;
    ```
 3. Update the `DATABASE_URL` in your `.env` file with your local credentials
 
@@ -104,7 +104,7 @@ The application will be available at `http://localhost:5000`
 ## 📁 Project Structure
 
 ```
-techflow-solutions/
+payzutech/
 ├── client/                 # Frontend React application
 │   ├── src/
 │   │   ├── components/     # Reusable UI components
@@ -275,9 +275,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For support and questions:
 
-- **Email**: support@techflowsolutions.com
-- **Documentation**: [Project Wiki](https://github.com/yourusername/techflow-solutions/wiki)
-- **Issues**: [GitHub Issues](https://github.com/yourusername/techflow-solutions/issues)
+- **Email**: support@payzutech.com
+- **Documentation**: [Project Wiki](https://github.com/yourusername/payzutech/wiki)
+- **Issues**: [GitHub Issues](https://github.com/yourusername/payzutech/issues)
 
 ## 🎉 Acknowledgments
 
@@ -289,4 +289,4 @@ For support and questions:
 
 ---
 
-Built with ❤️ by the TechFlow Solutions Team
+Built with ❤️ by the PayzuTech Team

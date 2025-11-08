@@ -12,7 +12,7 @@ const CaseStudiesSection = () => {
       title: 'Healthcare Cloud Migration',
       industry: 'Healthcare',
       description: 'Migrated legacy systems to cloud, improving patient data access by 60%',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&q=80&w=400&h=250',
+      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999e8?auto=format&fit=crop&q=80&w=400&h=250',
       metrics: '60% faster access',
       slug: 'healthcare-cloud-migration'
     },

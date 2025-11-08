@@ -26,7 +26,7 @@ const WhyChooseUs = () => {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <Badge className="mb-4 bg-electric-100 text-electric-700">Why TechFlow</Badge>
+          <Badge className="mb-4 bg-electric-100 text-electric-700">Why PayzuTech</Badge>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy-900 mb-6">
             Trusted by Industry Leaders
           </h2>

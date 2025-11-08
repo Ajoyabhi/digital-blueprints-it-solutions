@@ -1,8 +1,8 @@
-# TechFlow Solutions - IT Services Platform
+# PayzuTech - IT Services Platform
 
 ## Overview
 
-TechFlow Solutions is a modern, full-stack web application for an IT services company that provides cloud solutions, cybersecurity, AI/ML services, software development, and IT infrastructure management. The platform showcases services, case studies, and client testimonials while providing consultation booking capabilities.
+PayzuTech is a modern, full-stack web application for an IT services company that provides cloud solutions, cybersecurity, AI/ML services, software development, and IT infrastructure management. The platform showcases services, case studies, and client testimonials while providing consultation booking capabilities.
 
 ## User Preferences
 

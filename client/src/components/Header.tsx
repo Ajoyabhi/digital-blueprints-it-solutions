@@ -132,7 +132,7 @@ const Header = () => {
                   isScrolled ? "text-navy-900" : "text-white"
                 } group-hover:text-electric-500`}
               >
-                TechFlow
+                PayzuTech
               </span>
             </Link>
 

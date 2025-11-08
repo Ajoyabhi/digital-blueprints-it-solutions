@@ -18,7 +18,7 @@ const Terms = () => {
           </CardHeader>
           <CardContent>
             <p className="text-gray-700">
-              By accessing and using TechFlow Solutions' services, you accept and agree to be bound by the terms 
+              By accessing and using PayzuTech's services, you accept and agree to be bound by the terms 
               and provision of this agreement. If you do not agree to these terms, you should not use our services.
             </p>
           </CardContent>
@@ -29,7 +29,7 @@ const Terms = () => {
             <CardTitle className="text-2xl text-navy-800">Description of Services</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            <p className="text-gray-700">TechFlow Solutions provides IT consulting and services including:</p>
+            <p className="text-gray-700">PayzuTech provides IT consulting and services including:</p>
             <ul className="list-disc list-inside space-y-2 text-gray-700">
               <li>Cloud infrastructure design and migration</li>
               <li>Cybersecurity assessments and implementations</li>
@@ -108,7 +108,7 @@ const Terms = () => {
             <div>
               <h3 className="text-xl font-semibold text-navy-700 mb-3">Our IP</h3>
               <p className="text-gray-700">
-                TechFlow Solutions retains all rights to our methodologies, tools, templates, 
+                PayzuTech retains all rights to our methodologies, tools, templates, 
                 and pre-existing intellectual property.
               </p>
             </div>
@@ -158,7 +158,7 @@ const Terms = () => {
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-gray-700">
-              To the maximum extent permitted by law, TechFlow Solutions shall not be liable for any indirect, 
+              To the maximum extent permitted by law, PayzuTech shall not be liable for any indirect, 
               incidental, special, consequential, or punitive damages, including loss of profits, data, or business 
               interruption, arising from your use of our services.
             </p>
@@ -175,7 +175,7 @@ const Terms = () => {
           </CardHeader>
           <CardContent>
             <p className="text-gray-700">
-              You agree to indemnify and hold harmless TechFlow Solutions from any claims, damages, or expenses 
+              You agree to indemnify and hold harmless PayzuTech from any claims, damages, or expenses 
               arising from your violation of these terms, your use of our services, or your violation of any 
               rights of a third party.
             </p>
@@ -252,9 +252,9 @@ const Terms = () => {
           <CardContent className="space-y-2">
             <p className="text-gray-700">For questions about these Terms of Service, contact us at:</p>
             <div className="text-gray-700">
-              <p><strong>Email:</strong> legal@techflow.com</p>
+              <p><strong>Email:</strong> legal@payzutech.com</p>
               <p><strong>Phone:</strong> +1 (555) 123-4567</p>
-              <p><strong>Address:</strong> TechFlow Solutions, 123 Tech Street, San Francisco, CA 94105</p>
+              <p><strong>Address:</strong> PayzuTech, 123 Tech Street, San Francisco, CA 94105</p>
             </div>
           </CardContent>
         </Card>

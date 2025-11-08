@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'wouter';
 import ConsultationDialog from '@/components/dialogs/ConsultationDialog';
 
 const HeroSection = () => {
@@ -51,9 +52,11 @@ const HeroSection = () => {
                 Get Free Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 px-8 py-3 text-lg">
-                View Our Work
-              </Button>
+              <Link to="/case-studies">
+                <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 px-8 py-3 text-lg">
+                  View Our Work
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

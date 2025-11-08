@@ -18,7 +18,7 @@ const Privacy = () => {
           </CardHeader>
           <CardContent className="prose prose-lg max-w-none">
             <p>
-              TechFlow Solutions ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+              PayzuTech ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
             </p>
           </CardContent>
         </Card>
@@ -116,7 +116,7 @@ const Privacy = () => {
               <li><strong>Objection:</strong> Object to processing of your data</li>
               <li><strong>Opt-out:</strong> Withdraw consent for marketing communications</li>
             </ul>
-            <p className="text-gray-700">To exercise these rights, contact us at privacy@techflow.com</p>
+            <p className="text-gray-700">To exercise these rights, contact us at privacy@payzutech.com</p>
           </CardContent>
         </Card>
 
@@ -195,9 +195,9 @@ const Privacy = () => {
           <CardContent className="space-y-2">
             <p className="text-gray-700">For questions about this Privacy Policy, contact us at:</p>
             <div className="text-gray-700">
-              <p><strong>Email:</strong> privacy@techflow.com</p>
+              <p><strong>Email:</strong> privacy@payzutech.com</p>
               <p><strong>Phone:</strong> +1 (555) 123-4567</p>
-              <p><strong>Address:</strong> TechFlow Solutions, 123 Tech Street, San Francisco, CA 94105</p>
+              <p><strong>Address:</strong> PayzuTech, 123 Tech Street, San Francisco, CA 94105</p>
             </div>
           </CardContent>
         </Card>

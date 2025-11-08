@@ -18,7 +18,7 @@ const CaseStudyDetail = () => {
       duration: '6 months',
       teamSize: '8 specialists',
       description: 'Complete digital transformation of a regional medical center\'s patient management system through strategic cloud migration.',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&q=80&w=800&h=400',
+      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999e8?auto=format&fit=crop&q=80&w=800&h=400',
       challenge: 'The regional medical center was struggling with an outdated legacy patient management system that caused significant delays in patient care. The system frequently experienced downtime, had limited scalability, and posed compliance risks with HIPAA regulations. Staff productivity was severely impacted due to slow data access and unreliable system performance.',
       solution: 'We implemented a comprehensive cloud migration strategy using AWS infrastructure with enhanced security protocols. The solution included:\n\n• Migration to AWS cloud with auto-scaling capabilities\n• Implementation of HIPAA-compliant security measures\n• Real-time data backup and disaster recovery\n• Staff training and change management\n• 24/7 monitoring and support system',
       results: 'The transformation delivered exceptional results that exceeded all expectations:\n\n• 60% improvement in data access speed\n• 99.9% system uptime achieved\n• Full HIPAA compliance maintained\n• 40% reduction in IT maintenance costs\n• Enhanced patient satisfaction scores',

@@ -37,7 +37,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      content: 'hello@techflow.com',
+      content: 'hello@payzutech.com',
       description: 'Send us an email anytime'
     },
     {
@@ -65,19 +65,19 @@ const Contact = () => {
       city: 'San Francisco',
       address: '123 Innovation Drive, Suite 400',
       phone: '+1 (555) 123-4567',
-      email: 'sf@techflow.com'
+      email: 'sf@payzutech.com'
     },
     {
       city: 'London',
       address: '456 Tech Street, Floor 12',
       phone: '+44 20 1234 5678',
-      email: 'london@techflow.com'
+      email: 'london@payzutech.com'
     },
     {
       city: 'Singapore',
       address: '789 Business Boulevard, Level 25',
       phone: '+65 1234 5678',
-      email: 'singapore@techflow.com'
+      email: 'singapore@payzutech.com'
     }
   ];
 

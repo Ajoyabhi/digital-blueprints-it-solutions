@@ -16,7 +16,7 @@ const CaseStudies = () => {
       title: 'Healthcare Cloud Migration',
       industry: 'Healthcare',
       description: 'Migrated legacy patient management system to cloud infrastructure, improving data access speed by 60% while ensuring HIPAA compliance.',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&q=80&w=600&h=400',
+      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999e8?auto=format&fit=crop&q=80&w=600&h=400',
       metrics: ['60% faster access', '99.9% uptime', 'HIPAA compliant'],
       tags: ['Cloud Migration', 'Healthcare', 'Compliance'],
       challenge: 'Legacy system causing delays in patient care',

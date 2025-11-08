@@ -84,7 +84,7 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <Badge className="mb-6 bg-white/20 text-white border-white/30">
-                About TechFlow
+                About PayzuTech
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 Transforming Businesses Through Technology
@@ -261,7 +261,7 @@ const About = () => {
             Ready to Work with Us?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Join hundreds of satisfied clients who trust TechFlow with their technology needs.
+            Join hundreds of satisfied clients who trust PayzuTech with their technology needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-white text-electric-600 hover:bg-gray-100 px-8 py-3">
